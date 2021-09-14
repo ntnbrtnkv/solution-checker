@@ -1,0 +1,24 @@
+{
+  "name": "xfs2021-solution-checker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "toha1100@gmail.com",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jest": "^27.0.6"
+  },
+  "jest": {
+    "coverageReporters": ["text-summary"]
+  },
+  "scripts": {
+    "docker:build": "docker build --tag ntnbrtnkv/xfsgasfsfssfaahasfhgfsd20asfg21-test .",
+    "docker:push": "docker push ntnbrtnkv/xfsgasfsfssfaahasfhgfsd20asfg21-test",
+    "docker": "npm run build && npm run docker:build && npm run docker:push",
+    "unit": "jest --silent --noStackTrace --verbose",
+    "build": "javascript-obfuscator ./src -o ./build"
+  },
+  "devDependencies": {
+    "javascript-obfuscator": "^2.18.1"
+  }
+}
